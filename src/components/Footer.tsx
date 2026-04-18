@@ -11,20 +11,7 @@ export default function Footer() {
           FramerMotion.
         </p>
 
-        <div className="flex gap-8">
-          <a
-            href="#"
-            className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
-          >
-            Privacy
-          </a>
-          <a
-            href="#"
-            className="text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors"
-          >
-            Terms
-          </a>
-        </div>
+        <div className="flex gap-8"></div>
       </div>
     </footer>
   );

@@ -48,6 +48,23 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-8 relative inline-block"
+          >
+            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-tr from-primary/50 via-white/10 to-transparent animate-float">
+              <div className="w-full h-full rounded-full overflow-hidden border-2 border-background glass">
+                <img
+                  src="./Image_CV.jpg"
+                  alt="Avatar"
+                  className="w-full h-full object-cover brightness-110 contrast-110"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+            </div>
+          </motion.div>
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -77,7 +94,7 @@ export default function Hero() {
               onClick={() => (location.href = "#projects")}
             >
               {HERO_CONTENT.ctaPrimary}
-              <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <a href="/Nguyen-Duy-Thanh-CV.pdf" download>
               <Button
@@ -97,7 +114,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2"
+          className="absolute bottom-5 left-1/2 -translate-x-1/2"
         >
           <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center p-1">
             <motion.div
