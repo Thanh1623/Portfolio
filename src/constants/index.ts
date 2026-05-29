@@ -55,16 +55,6 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    title: "SonHa Warehouse Management System (WMS)",
-    description: `This project is a warehouse management system designed to handle inventory data and import/export transactions. It provides comprehensive
-features for managing warehouse operations, document workflows, user accounts, and core product data. Key functionalities include shipment verification and cancellation (incoming, outgoing, and transfer), as well as detailed tracking of
-transaction logs and user activity to ensure data accuracy, transparency, and traceability`,
-    image: "https://picsum.photos/seed/eco/800/600",
-    tech: ["ReactJS", "Tanstack", "Zustand", "Formik", "Tailwind", "Shadcn UI"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
     title: "3D Planner",
     description: `Built an interactive 3D interior design platform that allows users to create and customize layouts by dragging and dropping furniture within a
 virtual environment. Implemented real-time 2D/3D rendering, project saving, and dynamic cost estimation to enhance user experience and
@@ -82,6 +72,16 @@ and system efficiency.`,
       "Shadcn/ui",
     ],
     liveUrl: "https://cocinaseuropa.com/es",
+    githubUrl: "#",
+  },
+  {
+    title: "SonHa Warehouse Management System (WMS)",
+    description: `This project is a warehouse management system designed to handle inventory data and import/export transactions. It provides comprehensive
+features for managing warehouse operations, document workflows, user accounts, and core product data. Key functionalities include shipment verification and cancellation (incoming, outgoing, and transfer), as well as detailed tracking of
+transaction logs and user activity to ensure data accuracy, transparency, and traceability`,
+    image: "https://picsum.photos/seed/eco/800/600",
+    tech: ["ReactJS", "Tanstack", "Zustand", "Formik", "Tailwind", "Shadcn UI"],
+    liveUrl: "http://118.70.33.126:1444/",
     githubUrl: "#",
   },
   {
@@ -103,11 +103,61 @@ decentralized asset management.`,
     liveUrl: "https://dev-2025.motionbank.net/",
     githubUrl: "#",
   },
+  {
+    title: "Cốm Làng Vòng E-commerce Platform",
+    description: `Built a full-stack e-commerce platform dedicated to traditional Cốm Làng Vòng, providing users with a seamless browsing and purchasing experience. Implemented a dynamic product catalog, a context-based shopping cart system, and an end-to-end checkout flow. Enhanced user engagement through immersive homepage interactions powered by Framer Motion. Developed a comprehensive Admin Dashboard to manage products, monitor orders, and view sales statistics, utilizing Prisma for database management and Supabase for secure asset storage. Optimized for production performance, including SEO-driven metadata, dynamic image handling, and streamlined server-side rendering.`,
+    image: "https://picsum.photos/seed/com/800/600",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Prisma",
+      "Supabase",
+      "Framer Motion",
+      "TypeScript",
+    ],
+    liveUrl: "https://comlangvong.vercel.app/",
+    githubUrl: "#",
+  },
+  {
+    title: "FitLaps",
+    description: `FitLaps is a full-stack fitness and gym platform optimized for SEO, leveraging AI and affiliate marketing to support users in achieving their health and training goals. The system provides a comprehensive suite of tools, including health metrics calculators (BMI, TDEE, Calories, Macros) and intelligent generators (AI Workout Generator, AI Meal Planner) to facilitate personalized training and nutrition planning. The project prioritizes seamless user experience, scalable data management through Supabase and Prisma, and advanced AI integration to provide a highly personalized approach to health management.`,
+    image: "https://picsum.photos/seed/fit/800/600",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Supabase",
+      "Prisma",
+      "OpenAI",
+      "Framer Motion",
+      "Radix UI",
+    ],
+    liveUrl: "https://fit-laps.vercel.app/en",
+    githubUrl: "#",
+  },
+  {
+    title: "Liquor Retail E-commerce Platform",
+    description: `Developed a high-performance, scalable e-commerce platform for liquor retail, built with Next.js 15 and TypeScript for optimal SEO and performance. Streamlined data fetching and caching with TanStack Query, while leveraging Zustand for robust global state management. Crafted a modern, accessible, and fully responsive UI using Tailwind CSS and shadcn/ui. Integrated secure authentication via NextAuth.js. Implemented an integrated real-time messaging system to facilitate seamless communication and direct customer support. Architected a scalable backend using Prisma ORM and a PostgreSQL database, powering a comprehensive admin dashboard that enables efficient, data-driven management of product catalogs, real-time inventory tracking, order fulfillment, and user accounts.`,
+    image: "https://picsum.photos/seed/liquor/800/600",
+    tech: [
+      "Next.js 15",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "TanStack Query",
+      "Zustand",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth.js",
+    ],
+    liveUrl: "https://liquor-store-dusky.vercel.app/",
+    githubUrl: "#",
+  },
 ];
 
 export const EXPERIENCE = [
   {
-    company: "Công TNHH Next Level Solution ",
+    company: "Công ty TNHH Next Level Solution",
     role: "Frontend Developer (React, Next.js)",
     period: "09/2024 - Present",
     description: `Developed and delivered scalable, client-focused web applications using React.js, managing the full development lifecycle from concept to
@@ -137,7 +187,6 @@ export const EDUCATION = [
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "GitHub", url: "https://github.com", icon: "Github" },
-  { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
-  { name: "Email", url: "nguyenduythanh1623@gmail.com", icon: "Mail" },
+  { name: "GitHub", url: "https://github.com/Thanh1623", icon: "Github" },
+  { name: "Email", url: "mailto:nguyenduythanh1623@gmail.com", icon: "Mail" },
 ];

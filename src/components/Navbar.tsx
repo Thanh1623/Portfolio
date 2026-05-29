@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { NAV_LINKS } from "@/src/constants";
 import { cn } from "@/src/lib/utils";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -10,6 +11,8 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +36,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleLinkClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(href.substring(1));
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  };
+
   return (
     <nav
       className={cn(
@@ -43,14 +59,12 @@ export default function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <motion.a
-          href="#"
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+        <Link
+          to="/"
           className="text-2xl font-bold tracking-tighter"
         >
           T<span className="text-primary/50">.</span>
-        </motion.a>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -58,6 +72,11 @@ export default function Navbar() {
             <motion.a
               key={link.name}
               href={link.href}
+              onClick={(e) => {
+                if (location.pathname === "/") return;
+                e.preventDefault();
+                handleLinkClick(link.href);
+              }}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
@@ -114,7 +133,14 @@ export default function Navbar() {
                 <a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    if (location.pathname === "/") {
+                      setIsMobileMenuOpen(false);
+                      return;
+                    }
+                    e.preventDefault();
+                    handleLinkClick(link.href);
+                  }}
                   className="text-lg font-medium text-muted-foreground hover:text-primary"
                 >
                   {link.name}

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { PROJECTS } from "@/src/constants";
 import { Card, CardContent, CardFooter } from "@/src/components/ui/card";
 import { Badge } from "@/src/components/ui/badge";
@@ -18,13 +19,13 @@ export default function Projects() {
               building complex, user-centric applications.
             </p>
           </div>
-          {/* <a href="#" className="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors">
+          <Link to="/all-projects" className="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors">
             View all projects →
-          </a> */}
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.map((project, i) => (
+          {PROJECTS.slice(0, 3).map((project, i) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 30 }}
@@ -47,12 +48,6 @@ export default function Projects() {
                     >
                       <ExternalLink className="w-5 h-5" />
                     </a>
-                    <a
-                      href={project.githubUrl}
-                      className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-colors"
-                    >
-                      <Github className="w-5 h-5" />
-                    </a>
                   </div>
                 </div>
                 <CardContent className="p-6 flex-grow">
@@ -74,10 +69,10 @@ export default function Projects() {
                     {project.description}
                   </p>
                 </CardContent>
-                <CardFooter className="p-6 pt-0 flex justify-between items-center">
+                <CardFooter className="p-6 pt-4">
                   <a
                     href={project.liveUrl}
-                    className="text-xs font-bold uppercase tracking-widest flex items-center gap-2 hover:text-primary transition-colors"
+                    className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest bg-primary text-primary-foreground px-4 py-2 rounded-full hover:bg-primary/90 transition-colors"
                   >
                     Live Demo <ExternalLink className="w-3 h-3" />
                   </a>
