@@ -54,7 +54,7 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="mb-8 relative inline-block"
           >
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-full p-1 bg-gradient-to-tr from-primary/50 via-white/10 to-transparent animate-float">
+            <div className="w-28 h-28 md:w-32 md:h-32 rounded-full p-1 bg-gradient-to-tr from-primary/50 via-white/10 to-transparent animate-float">
               <div className="w-full h-full rounded-full overflow-hidden border-2 border-background glass">
                 <img
                   src="./Image_CV.jpg"
