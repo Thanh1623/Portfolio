@@ -77,10 +77,10 @@ export default function Projects() {
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-16 text-center">
           <Link
             to="/all-projects"
-            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest bg-white text-black px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300 transform hover:scale-105"
           >
             View all projects →
           </Link>
