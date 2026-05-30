@@ -8,7 +8,7 @@ export default function AllProjects() {
   return (
     <div className="min-h-screen py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">All Projects</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">Những sản phẩm nổi bật của tôi</h1>
         <p className="text-muted-foreground text-lg mb-16 max-w-2xl">
           A comprehensive collection of my work, showcasing my skills across various technologies and domains.
         </p>
