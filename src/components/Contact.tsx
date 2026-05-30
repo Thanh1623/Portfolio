@@ -39,7 +39,7 @@ export default function Contact() {
                   <button
                     key={link.name}
                     onClick={() => copyToClipboard(link.url.replace("mailto:", ""))}
-                    className="p-4 glass rounded-2xl hover:bg-white/10 transition-all duration-300 group flex items-center gap-2"
+                    className="p-4 glass rounded-2xl hover:bg-white/10 transition-all duration-300 group flex items-center gap-2 cursor-pointer"
                     aria-label={link.name}
                   >
                     {copied ? <Check className="w-6 h-6 text-green-500" /> : <Icon className="w-6 h-6 group-hover:scale-110 transition-transform" />}
