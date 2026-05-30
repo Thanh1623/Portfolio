@@ -9,19 +9,14 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-              Featured Work
-            </h2>
-            <p className="text-muted-foreground max-w-xl">
-              A selection of my recent projects, demonstrating my expertise in
-              building complex, user-centric applications.
-            </p>
-          </div>
-          <Link to="/all-projects" className="text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors">
-            View all projects →
-          </Link>
+        <div className="mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            Featured Work
+          </h2>
+          <p className="text-muted-foreground max-w-xl">
+            A selection of my recent projects, demonstrating my expertise in
+            building complex, user-centric applications.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -80,6 +75,15 @@ export default function Projects() {
               </Card>
             </motion.div>
           ))}
+        </div>
+
+        <div className="mt-12 text-center">
+          <Link
+            to="/all-projects"
+            className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary pb-1"
+          >
+            View all projects →
+          </Link>
         </div>
       </div>
     </section>
