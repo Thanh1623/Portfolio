@@ -8,7 +8,10 @@ export default function AllProjects() {
   return (
     <div className="min-h-screen py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-16">All Projects</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">All Projects</h1>
+        <p className="text-muted-foreground text-lg mb-16 max-w-2xl">
+          A comprehensive collection of my work, showcasing my skills across various technologies and domains.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS.map((project, i) => (
             <Card key={i} className="glass-dark border-white/5 overflow-hidden group h-full flex flex-col">
